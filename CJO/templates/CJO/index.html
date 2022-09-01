@@ -1,0 +1,17 @@
+{% extends "CJO/layout.html" %} 
+{% load static %}
+{% block media %} {{ quill2.media }} {% endblock %}
+{% block title %} Index {% endblock %}
+{% block body %}
+<!-- <form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+   
+    {{quill2.content1}}
+   <input type="submit" value="Submit"> 
+</form>
+
+{% for post in mater %}
+{{ post.content.html|safe }}
+{% endfor %}-->
+
+{% endblock %}

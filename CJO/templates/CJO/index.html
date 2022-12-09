@@ -1,17 +1,167 @@
-{% extends "CJO/layout.html" %} 
-{% load static %}
-{% block media %} {{ quill2.media }} {% endblock %}
-{% block title %} Index {% endblock %}
-{% block body %}
-<!-- <form action="{% url 'index' %}" method="post">
-    {% csrf_token %}
-   
-    {{quill2.content1}}
-   <input type="submit" value="Submit"> 
-</form>
+    {% extends "CJO/layout.html" %}
+    {% load static %}
+    {% block media %} {{ quill2.media }} {% endblock %}
+    {% block title %} Index {% endblock %}
+    {% block body %}
+    <!-- <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+       
+        {{quill2.content1}}
+       <input type="submit" value="Submit"> 
+    </form>
 
-{% for post in mater %}
-{{ post.content.html|safe }}
-{% endfor %}-->
+    {% for post in mater %}
+    {{ post.content.html|safe }}
+    {% endfor %}-->
+
+    <section class="banner" style="background-color:rgb(250, 250, 250);" id="about-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="container intro-name">
+                        <div class="org-name">
+                            <h1 class="actual-name">Climate Justice Foundation</h1>
+                        </div>
+                        <div class="org-intro">
+                            Fighting for Climate Justice. Ensuring a better future for ourselves and future generations
+                        </div> 
+                        <button class="custom-btn" style="margin-top: 2rem;"><a class="nav-link" href=""> MAKE A DONATION </a></button>
+                    </div>  
+
+                    
+                </div>
+                <div class="col-lg-6">
+                    <div class="container image-container">
+                        <img class="intro-image" src="{% static 'CJO/logo4.png'%}">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="mission">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="container">
+                     <img class="intro-image" src="{% static 'CJO/Team-goals-amico.svg' %}"> 
+                 </div>
+
+             </div>
+             <div class="col-lg-6">
+                <div class="container intro-name">
+                    <div class="org-name">
+                     <h1 class="actual-name">OUR GOALS</h1> 
+                 </div>
+                 <div  style="text-align: justify;"class="mission-list ">
+                    <ul class="list-it">
+                        <li class="bullet">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        </li>
+                        <li class="bullet">
+                            Lorem  ipsum dolor sit amet,
+                        </li>
+                        <li class="bullet">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="bullet">
+                            Lorem ipusum dolor
+                        </li>
+                        <li class="bullet">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+                        </li>
+                    </ul>
+
+                </div>  
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</section>
+<section class="news">\
+    <div class="container">
+        <div class="container intro-name">
+            <div class="org-name">
+             <h1 class="actual-name">Climate News</h1> 
+         </div>
+     </div> 
+
+     <div class="row">
+
+         <div class="col-lg-4">
+            <a href="#UrlLeadingTopage" class="nav-link">
+                <div class="card mb-3">
+                    <img class="card-img-top card-image" src="{% static 'CJO/save-planet-concept-with-people-taking-care-earth_23-2148522570.webp'%}">
+                    <div class="card-body">
+                        <h3>Why go green</h3>
+                        <p class="card-description">Some text describing a bit of the headline to entice the user</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <div class="col-lg-4">
+            <a href="#UrlLeadingTopage" class="nav-link">
+                <div class="card mb-3">
+                    <img class="card-img-top card-image" src="{% static 'CJO/close-up-picture-hand-watering-sapling-plant_1150-28357.webp'%}">
+                    <div class="card-body">
+                        <h3>Why Plant some Trees</h3>
+                        <p class="card-description">Some text describing a bit of the headline to entice the user</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#UrlLeadingTopage" class="nav-link">
+                <div class="card mb-3">
+                    <img class="card-img-top card-image" src="{% static 'CJO/traveling-destination-location-flat_94753-417.jpg'%}">
+                    <div class="card-body">
+                        <h3>Achieving Climate Justice</h3>
+                        <p class="card-description">Some text describing a bit of the headline to entice the user</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="container">
+           <a href="#" style="color: #996812; font-size: 1rem; line-height: 1.5rem; font-weight: 900;">More News></a> 
+        </div>
+        
+    </div>
+
+</div>
+
+
+</section>
+<section class="writers-call">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="container intro-name">
+                    <div class="org-name">
+                        <h1 class="actual-name">Climate Essays</h1>
+                    </div>
+                    <div class="org-intro">
+                        <p>Do you Have an essay About the climate?
+                            Would you like to submit an essay on your climate efforts?
+                        Maybe An essay on the impact it has had on your Life?</p>
+
+                    </div>
+                    <button class="custom-btn"> <a class="nav-link" href="">Submit Essays</a></button>
+                </div>
+
+
+            </div>
+            <div class="col-lg-6">
+                <div class="container">
+                 <img class="intro-image" src="{% static 'CJO/editing_lady.svg' %}"> 
+             </div>
+         </div>
+
+     </div>
+ </div>
+</section>
 
 {% endblock %}

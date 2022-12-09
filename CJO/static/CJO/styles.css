@@ -1,3 +1,7 @@
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
 .colorhunt {
     background-color: #fcdfae;
 }
@@ -15,4 +19,163 @@
 
 .backgrounder {
     background-image: url('logo.png');
+}
+
+
+
+/*
+add a media query that adjusts the height and width depending on the width
+the first is at a max-width: 570px then one at min-width 720px
+*/
+
+@media (max-width: 570px) {
+    .back-image{
+        height: 50vw;
+        width: 100vw;
+    }
+}
+
+@media (min-width:571px) and (max-width:770px) {
+    .back-image {
+        height: 50vw;
+        width: 50vw;
+    }
+}
+@media (max-width:770px) {
+    .image-container {
+        margin-top: 2rem;
+    }
+}
+
+.org-name, .org-intro {
+    font-family: 'Mulish', sans-serif;
+}
+
+.org-intro {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: left;
+    color: #01581a;
+}
+
+.actual-name {
+    font-weight: 900;
+    font-size: 3rem;
+    size: 3rem;
+    line-height: 3.25rem;
+    margin-bottom: 1.5rem;
+    color: #043512;
+
+}
+h3 {
+    color: #043512;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 2.25rem;
+    font-style: normal;
+}
+
+.card-description {
+    color: #01581a;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+
+.intro-name {
+    text-align: left;
+    margin-top: 8.5rem;
+}
+
+.intro-image {
+    height: 100%;
+    width: 100%;
+    margin-top:2rem;
+}
+.image-container {
+    text-align: center;
+}
+
+/* add this font family:
+
+    font-family: Mulish-Black;
+
+    use the  same design for the points of our mission
+
+    use a list item
+    #0099f6 as the color for the list items
+
+    another color I i might use it's a shade of green
+    #7BF59D
+
+      */
+.list-it {
+    list-style: none;
+}
+
+.list-it .bullet::before {
+    content:"";
+    display:inline-block;
+    width: 0.5em;
+    height: .5em;
+    margin-top: .5em;
+    margin-right: 0.5em;
+    background-color:#7BF59D;
+    line-height: 1em;
+    margin-left: -1.2em;
+}
+
+.bullet {
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.87\5rem;
+    color: #01581a;
+}
+
+.card-image {
+    height: 20vw;
+    object-fit: cover;
+}
+
+.custom-btn {
+    border-radius: 0;
+    font-weight: 700;
+    font-style: normal;
+    border-color: transparent;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    background-color: #7BF59D;
+    color: #ffff;
+}
+
+.custom-btn:hover {
+    background-color: #5dd67f;
+}
+
+.custom-nav {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.2 rem;
+    color: #043512;
+    text-decoration: none;
+    margin: 0.8rem;
+}
+
+.custom-nav:hover {
+   color:#7BF59D;
+}
+
+button.navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+button.navbar-toggler:focus {
+    border: none;
+    box-shadow: none; 
 }

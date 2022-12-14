@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import QuillPost
+from .models import NewsArticle, Category
 # Register your models here.
-admin.site.register(QuillPost)
+admin.site.register(NewsArticle)
+admin.site.register(Category)

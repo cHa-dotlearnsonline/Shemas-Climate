@@ -1,0 +1,73 @@
+{% extends "CJO/layout.html" %}
+{% load static %}
+{% block media %} {{quill2.media}} {% endblock %}
+{% block title %} Climate Justice Foundation {% endblock%} 
+{% block body %}
+<div class="container">
+	{% for article in articles %}
+
+	{% if forloop.first %}
+	<div class="category-heading">
+		<h4 class="actual-name">{{article.0.category.category_name}}</h4>
+	</div>
+	<div class="container mb-3">
+		<div class="row">
+			{% for actual_article in article %}
+
+
+			{% if forloop.first %}
+			<div class="col-md-4 latest-story">
+				<a href="{% url 'articles' actual_article.id %}" class="nav-link">
+					<div class="card">
+						<img class="card-img-top card-image" src="{{actual_article.leadImage.url}}" class="card-img">
+
+						<div class="card-body">
+							<h3 class="card-title">{{actual_article.headLine}}</h3>
+						</div>
+
+					</div>
+				</a>	
+			</div>
+			{% else %}
+			<div class="col-md-4">
+				<a href="{% url 'articles' actual_article.id %}" class="nav-link">
+					<div class="card mb-3">
+						<img class="card-img-top card-image" src="{{actual_article.leadImage.url}}">
+						<div class="card-body">
+							<h3 class="card-title">{{actual_article.headLine}}</h3>	
+						</div>
+					</div>
+				</a>
+
+
+			</div>
+
+		{% endif %}	
+		{% endfor %}
+	
+	{% else %}
+	<div class="category-heading">
+		<h4 class="actual-name">{{article.0.category.category_name}}</h4>
+	</div>
+	{% for actual_article in article %}
+	<div class="col-md-4">
+
+		<a href="{% url 'articles' actual_article.id %}" class="nav-link">
+			<div class="card mb-3">
+				<img class="card-img-top card-image" src="{{actual_article.leadImage.url}}">
+				<div class="card-body">
+					<h3 class="card-title">{{actual_article.headLine}}</h3>	
+				</div>
+			</div>
+		</a>			            </div>
+		{% endfor %}
+
+		{% endif %}
+		{% endfor %}
+		</div>
+		</div>
+	</div>
+
+
+	{% endblock %}
+

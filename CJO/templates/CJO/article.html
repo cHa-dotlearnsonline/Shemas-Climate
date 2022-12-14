@@ -1,0 +1,16 @@
+{% extends "CJO/layout.html" %}
+{% load static %}
+{% block media %} {{quill2.media}} {% endblock %}
+{% block title %} {{ article.headLine }} {% endblock%} 
+{% block body %}
+<div class="container">
+	<div class="mx-auto">
+		<div class="ql-editor">
+			{{ article.content.html|safe}}	
+		</div>	
+	</div>
+	
+</div>	
+
+
+{% endblock %}

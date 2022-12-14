@@ -41,11 +41,7 @@ the first is at a max-width: 570px then one at min-width 720px
         width: 50vw;
     }
 }
-@media (max-width:770px) {
-    .image-container {
-        margin-top: 2rem;
-    }
-}
+
 
 .org-name, .org-intro {
     font-family: 'Mulish', sans-serif;
@@ -90,6 +86,8 @@ h3 {
     text-align: left;
     margin-top: 8.5rem;
 }
+
+
 
 .intro-image {
     height: 100%;
@@ -167,7 +165,7 @@ h3 {
 }
 
 .custom-nav:hover {
-   color:#7BF59D;
+ color:#7BF59D;
 }
 
 button.navbar-toggler {
@@ -178,4 +176,17 @@ button.navbar-toggler {
 button.navbar-toggler:focus {
     border: none;
     box-shadow: none; 
+}
+
+.clickme:hover {
+    text-decoration: underline;  
+}
+
+.clicker {
+    text-transform: capitalize;
+}
+@media (max-width:992px) {
+    .intro-name {
+        margin-top: 2.5rem;
+    }
 }

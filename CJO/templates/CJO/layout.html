@@ -12,6 +12,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{% static 'CJO/styles.css' %}">
   <link rel="stylesheet" href="{% static 'CJO/bootstrap.css' %}">
+
   <link rel="icon"  href="{% static 'CJO/favicon.ico' %}">
   {% block media %}{% endblock %}
   <title>{% block title %}Climate Justice Organisation{% endblock %}</title>
@@ -31,11 +32,11 @@
       </button>
       <div class="centernav collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="active custom-nav" aria-current="page" href="#">About Us</a>
-          <a class="custom-nav" href="#">News</a>
-          <a class="custom-nav" href="#">Projects</a>
-          <a class="custom-nav" href="#">Essays</a>
-          <a class="custom-nav" href="#">Partners</a>
+          <a class="active custom-nav" aria-current="page" href="{% url 'index' %}">About Us</a>
+          <a class="custom-nav" href="{% url 'news' %}">News</a>
+        <!--  <a class="custom-nav" href="#">Projects</a> -->
+          <a class="custom-nav" href="#essays">Essays</a>
+        <!--  <a class="custom-nav" href="#">Partners</a> -->
         </div>
       </div>
     </div>
@@ -58,11 +59,11 @@
         <div class="col mb-3">
           <h5>Foundation</h5>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">News</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Partners</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Essays</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Projects</a></li>
+            <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-muted">About Us</a></li>
+            <li class="nav-item mb-2"><a href="{% url 'news' %}" class="nav-link p-0 text-muted">News</a></li>
+            <!--<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Partners</a></li>-->
+            <li class="nav-item mb-2"><a href="#essays" class="nav-link p-0 text-muted">Essays</a></li>
+            <!--<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Projects</a></li>-->
         </ul>
     </div>
     <div class="col mb-3">

@@ -14,16 +14,22 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_ROOT =''
+MEDIA_URL ='/media/'
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nhb$^1_f(l9wcm)5=s#j1%*il9$^az38*s4$a88a)e%q08t73+'
+#SECRET_KEY = 'django-insecure-nhb$^1_f(l9wcm)5=s#j1%*il9$^az38*s4$a88a)e%q08t73+'
+import os 
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-nhb$^1_f(l9wcm)5=s#j1%*il9$^az38*s4$a88a)e%q08t73+')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = []
 

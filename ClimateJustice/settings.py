@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-nhb$^1_f(l9wcm
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shemas-climate-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -145,3 +145,6 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#adding a csrf for trusted origins for the sake of security
+CSRF_TRUSTED_ORIGINS = ['https://shemas-climate-production.up.railway.app']

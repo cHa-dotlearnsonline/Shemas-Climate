@@ -29,7 +29,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-nhb$^1_f(l9wcm
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = False
+
+#DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['shemas-climate-production.up.railway.app', '127.0.0.1']
 

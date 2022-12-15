@@ -17,7 +17,7 @@
 
 			{% if forloop.first %}
 			<div class="col-md-4 latest-story">
-				<a href="{% url 'articles' actual_article.id %}" class="nav-link">
+				<a href="{% url 'articles' actual_article.id %}" class="nav-link clickme">
 					<div class="card">
 						<img class="card-img-top card-image" src="{{actual_article.leadImage.url}}" class="card-img">
 
@@ -30,7 +30,7 @@
 			</div>
 			{% else %}
 			<div class="col-md-4">
-				<a href="{% url 'articles' actual_article.id %}" class="nav-link">
+				<a href="{% url 'articles' actual_article.id %}" class="nav-link clickme">
 					<div class="card mb-3">
 						<img class="card-img-top card-image" src="{{actual_article.leadImage.url}}">
 						<div class="card-body">
@@ -52,7 +52,7 @@
 	{% for actual_article in article %}
 	<div class="col-md-4">
 
-		<a href="{% url 'articles' actual_article.id %}" class="nav-link">
+		<a href="{% url 'articles' actual_article.id %}" class="nav-link clickme">
 			<div class="card mb-3">
 				<img class="card-img-top card-image" src="{{actual_article.leadImage.url}}">
 				<div class="card-body">

@@ -33,7 +33,7 @@ DEBUG = False
 
 #DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['shemas-climate-production.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['climate-justice-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -149,4 +149,4 @@ DATABASES['default'].update(db_from_env)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #adding a csrf for trusted origins for the sake of security
-CSRF_TRUSTED_ORIGINS = ['https://shemas-climate-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://climate-justice-production.up.railway.app/']
